@@ -26,12 +26,12 @@ import time
 # pylint: disable=g-bad-import-order
 from absl import flags
 from absl.testing import flagsaver
-import tensorflow as tf
+import tensorflow.compat.v2 as tf
 # pylint: enable=g-bad-import-order
 
-from official.bert import modeling
-from official.bert import run_classifier
-from official.bert.benchmark import benchmark_utils
+from official.benchmark import bert_benchmark_utils as benchmark_utils
+from official.nlp import bert_modeling as modeling
+from official.nlp.bert import run_classifier
 from official.utils.misc import distribution_utils
 
 # pylint: disable=line-too-long
